@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List</title>
+</head>
+<body>
+	{% for subj in subjects %}
+		{# <a href="{% url 'page-detail' subj.id %}">  {{subj.title}} </a><br><hr> #}
+		
+		<a href="{{subj.get_absolute_url}}">  {{subj.title}} </a><br><hr>
+	{% endfor %}
+</body>
+</html>
